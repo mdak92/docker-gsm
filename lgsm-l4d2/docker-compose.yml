@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  # volume example
+  linuxgsm-l4d2-volume:
+    image: gameservermanagers/gameserver:l4d2
+    container_name: l4d2server
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+      - linuxgsm-l4d2:/data
+    network_mode: host
+
+volumes:
+  linuxgsm-l4d2:
